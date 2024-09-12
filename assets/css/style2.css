@@ -1,0 +1,49 @@
+/* Make the carousel slides move vertically */
+#vertical-carousel .carousel-inner {
+    display: flex;
+    flex-direction: column; /* Stack slides vertically */
+    height: 400px; /* Adjust height as needed */
+  }
+  
+  /* Ensure smooth vertical transition */
+  #vertical-carousel .carousel-item {
+    transition: transform 1.0s ease-in-out;
+  }
+  
+  /* Adjust the transition effect for vertical sliding */
+  #vertical-carousel .carousel-item-next,
+  #vertical-carousel .carousel-item-prev {
+    transform: translateY(100%);
+  }
+  
+  #vertical-carousel .carousel-item-next {
+    transform: translateY(-100%);
+  }
+  
+  /* Ensure the active slide stays in place */
+  #vertical-carousel .carousel-item.active {
+    transform: translateY(0);
+  }
+  
+  /* Carousel indicators styling */
+  .carousel-indicators {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+   
+  }
+  
+  .carousel-indicators .active {
+    background-color: #fff;
+  }
+  
